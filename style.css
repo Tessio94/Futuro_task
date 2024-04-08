@@ -1,0 +1,392 @@
+:root {
+  --color--foot-head: #1d1d1b;
+  --color--hamb-mark: #ea5b16;
+  --color--product: #616161;
+  --color--price: #ce2025;
+
+  --color--product-trans: #61616142;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+  background: url(./img/circuit.png) right top -2rem/ 100% 35% no-repeat,
+    url(./img/background.png) right bottom / 70% 75% no-repeat;
+}
+
+.header {
+  position: relative;
+  background: var(--color--foot-head);
+  padding: 1rem 12rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.menu p {
+  cursor: pointer;
+}
+
+.hamb {
+  position: relative;
+}
+
+.bx-menu {
+  position: relative;
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.notif {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--color--hamb-mark);
+  position: absolute;
+  top: 0.3rem;
+  right: 0.2rem;
+}
+
+.prijava {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.prijava > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.prijava img,
+.prijava p {
+  cursor: pointer;
+}
+
+.top_container {
+  width: 100%;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.search_container {
+  position: relative;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_container input {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  outline: none;
+  border-width: 0.2rem 0 0 0.2rem;
+  border-color: var(--color--product-trans);
+  box-shadow: 0 0 2rem 1rem var(--color--product-trans);
+  background-color: white;
+}
+
+.search {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2rem;
+  cursor: pointer;
+}
+
+.bottom_container {
+  width: 70%;
+  margin: 10rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.product_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: white;
+  box-shadow: 0 0 2rem 0.5rem var(--color--product-trans);
+  padding: 2rem 0 4rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.product p {
+  color: var(--color--product);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.product span {
+  color: var(--color--price);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.product img:last-child {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color--product-trans);
+  border-radius: 50%;
+}
+
+.dot:first-child {
+  background-color: white;
+  transform: scale(1.1);
+}
+
+.footer {
+  background: var(--color--foot-head);
+  padding: 2rem 10rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.list li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .brands {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .brands {
+    max-width: 700px;
+  }
+  .bottom_container {
+    width: 80%;
+  }
+  .search_container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .brands {
+    max-width: 650px;
+  }
+  .bottom_container {
+    width: 80%;
+  }
+  body {
+    background: url(./img/circuit.png) right top -2rem/ 100% 35% no-repeat,
+      url(./img/background.png) right bottom / 75% 75% no-repeat;
+  }
+  .search_container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .brands {
+    max-width: 500px;
+  }
+
+  .product p {
+    color: var(--color--product);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .product span {
+    color: var(--color--price);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .product img {
+    max-width: 12rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .search_container {
+    width: 60%;
+  }
+  .brands {
+    max-width: 400px;
+  }
+
+  .bottom_container {
+    width: 90%;
+  }
+  .product img {
+    max-width: 10rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .search_container {
+    width: 70%;
+  }
+  .brands {
+    max-width: 350px;
+  }
+
+  .bottom_container {
+    width: 90%;
+  }
+  .product p {
+    font-size: 0.8rem;
+  }
+  .product img {
+    max-width: 8rem;
+    height: auto;
+  }
+  .header {
+    padding: 1rem 8rem;
+  }
+  .footer {
+    padding: 2rem 4rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .search_container {
+    width: 75%;
+  }
+  .brands {
+    max-width: 300px;
+  }
+  .product_container {
+    gap: 1.5rem;
+  }
+
+  .product p {
+    font-size: 0.8rem;
+  }
+  .product img {
+    max-width: 8rem;
+    height: auto;
+  }
+  .header {
+    padding: 1rem 5rem;
+  }
+  .footer {
+    padding: 2rem 2.5rem;
+    gap: 2.5rem;
+  }
+  .search {
+    width: 2.5rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .product_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .header {
+    padding: 1rem 2rem;
+  }
+  .prijava {
+    gap: 2rem;
+  }
+  .search_container {
+    width: 80%;
+  }
+  .search_container input {
+    font-size: 1.1rem;
+  }
+  .footer {
+    background: var(--color--foot-head);
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer {
+    padding: 2rem 2rem;
+    gap: 2rem;
+  }
+  .list {
+    gap: 0.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .product_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .bottom_container {
+    width: 70%;
+  }
+  .product p {
+    font-size: 1.2rem;
+  }
+  .product img {
+    max-width: 12rem;
+    height: auto;
+  }
+  .search_container input {
+    font-size: 1rem;
+  }
+  .menu {
+  }
+  .prijava img {
+    width: 2.2rem;
+    height: auto;
+  }
+}
